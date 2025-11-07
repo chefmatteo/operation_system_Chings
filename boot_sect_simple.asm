@@ -1,6 +1,8 @@
-loop: 
-    jmp loop 
+; This is an infinite loop that halts the CPU,
+; commonly used to prevent further execution in boot sectors.
+loop:
+    jmp loop
 
 
-time 510-($-$$) db 0
+times 510-($-$$) db 0
 dw 0xaa55 
